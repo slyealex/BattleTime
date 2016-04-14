@@ -2,41 +2,37 @@
 
   <h1>Sign Up</h1>
 
-  <%= form_for @user do |f| %>
+  <div class="col-md-4">
+    <%= bootstrap_form_for @user do |f| %>
 
-    <div class="form-field">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-    </div>
+      <div class="form-field">
+        <%= f.text_field :username, label: 'Username' %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
+      <div class="form-field">
+        <%= f.text_field :email %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :first_name %>
-      <%= f.text_field :firstname %>
-    </div>
+      <div class="form-field">
+        <%= f.text_field :firstname, label: 'First Name' %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :last_name %>
-      <%= f.text_field :lastname %>
-    </div>
+      <div class="form-field">
+        <%= f.text_field :lastname, label: 'Last Name' %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
+      <div class="form-field">
+        <%= f.password_field :password %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
-    </div>
+      <div class="form-field">
+        <%= f.password_field :password_confirmation, label: 'Confirm Password' %>
+      </div>
 
-    <div class="submit-field">
-      <%= f.submit :submit %>
-    </div>
-    
-  <% end %>
+      <div class="submit-field">
+        <%= f.submit :submit, class: 'btn btn-primary' %>
+      </div>
+
+    <% end %>
+  </div>
 </div>

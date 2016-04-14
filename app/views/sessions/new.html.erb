@@ -1,21 +1,21 @@
 <div class="container">
   <h1>Log In</h1>
 
-  <%= form_tag sessions_path do %>
+  <div class="col-md-4">
+    <%= bootstrap_form_tag url: sessions_path do |f| %>
 
-    <div class="form-field">
-      <%= label_tag :email %>
-      <%= text_field_tag :email, params[:email] %>
-    </div>
+      <div class="form-field">
+        <%= f.email_field :email %>
+      </div>
 
-    <div class="form-field">
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-    </div>
+      <div class="form-field">
+        <%= f.password_field :password %>
+      </div>
 
-    <div class="form-field">
-      <%= submit_tag 'Log In' %>
-    </div>
+      <div class="form-field">
+        <%= f.submit 'Log In', class: 'btn btn-primary' %>
+      </div>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
