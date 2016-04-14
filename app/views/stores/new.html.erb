@@ -1,2 +1,27 @@
-<h1>Stores#new</h1>
-<p>Find me in app/views/stores/new.html.erb</p>
+<div class="container">
+  <h1>Store Registration</h1>
+  <p>Thinking of registering you're hobby/boardgame/minitures store? You have come to the right place. BattleTime strives to create a hub for organized play. Schedule events and invite your customers to check out your store calendar.</p>
+  <p>Step one is to register below, after that your store will be evaluated for legitimacy by admins, once approved it will be added to our store finder and the owner will be given full access to add and remove events from the calendar.</p>
+  <h1>So get started!</h1>
+
+  <%= form_for @store do |f| %>
+    <div class="form-field">
+      <%= f.label :store_name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+    </div>
+
+    <div class="action">
+      <%= f.submit 'Send' %>
+    </div>
+  <% end %>
+</div>
