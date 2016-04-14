@@ -16,9 +16,16 @@
 
   <%= yield %>
 
-  <% if current_user %>
-    <p>Signed in as: <strong><%= current_user.username.capitalize %></strong></p>
-  <% end %>
-  
+  <div class="container">
+    <% if current_user %>
+      <p>Signed in as: <strong><%= current_user.username.capitalize %></strong></p>
+    <% end %>
+  </div>
+
+  <div class="container">
+    <footer>
+      <p><small>&copy BattleTime | Alex Slye | 2016</small></p>
+    </footer>
+  </div>
   </body>
 </html>
