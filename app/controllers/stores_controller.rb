@@ -14,7 +14,11 @@ class StoresController < ApplicationController
   end
 
   def index
-    Store.all
+    @stores = Store.all
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

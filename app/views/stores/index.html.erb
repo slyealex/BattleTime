@@ -1,2 +1,12 @@
-<h1>Stores#index</h1>
-<p>Find me in app/views/stores/index.html.erb</p>
+<div class="container">
+  <h1>Find a store</h1>
+
+  <div class="container">
+    <% @stores.each do |store| %>
+      <p>Name: <%= store.name %></p>
+      <p>Address: <%= store.address %></p>
+      <p>Store Email: <%= store.email %></p>
+      <p><%= link_to 'View Store Page', "/stores/#{store.id}" %></p>
+    <% end %>
+  </div>
+</div>
