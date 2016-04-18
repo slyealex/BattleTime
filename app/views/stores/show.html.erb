@@ -7,6 +7,14 @@
 <div class="container">
   <h1>All Events</h1>
 
+  <% @store.events.each do |event| %>
+    <div class="event-container">
+      <h6><%= event.name %></h6>
+      <p><%= event.time %></p>
+      <p><%= event.description %></p>
+      <%= link_to 'Delete', [@store, event], method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
 
 </div>
 
@@ -16,7 +24,7 @@
   <div class="col-md-4">
     <%= bootstrap_form_for([@store, @event]) do |f| %>
       <%= f.text_field :name %>
-      <%= f.datetime_field :time %>
+      <%= f.datetime_select :time %>
       <%= f.text_area :description %>
       <%= f.submit 'Add Event', class: 'btn btn-success' %>
     <% end %>

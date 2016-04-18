@@ -18,6 +18,17 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    @store = Store.find(params[:store_id])
+    @event = @store.events.find(params[:id])
+    @event.destroy
+    redirect_to root_path, notice: 'Event successfully deleted!'
+  end
+
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
 
   def event_params
