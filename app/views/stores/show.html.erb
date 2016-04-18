@@ -6,14 +6,19 @@
 
 <div class="container">
   <h1>All Events</h1>
+
+
 </div>
 
 <div class="container">
   <h1>Add Event</h1>
 
-  <%= bootstrap_form_for(@store, @event) do |f| %>
-    <%= f.text_field :name %>
-    <%= f.datetime :time %>
-    <%= f.text_area :description %>
-  <% end %>
+  <div class="col-md-4">
+    <%= bootstrap_form_for([@store, @event]) do |f| %>
+      <%= f.text_field :name %>
+      <%= f.datetime_field :time %>
+      <%= f.text_area :description %>
+      <%= f.submit 'Add Event', class: 'btn btn-success' %>
+    <% end %>
+  </div>
 </div>

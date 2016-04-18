@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :stores
-  resources :events
+  resources :stores do
+    resources :events, only: [:show, :create, :destroy]
+  end
+
+
+
 
 end
