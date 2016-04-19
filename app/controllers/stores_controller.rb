@@ -18,7 +18,7 @@ class StoresController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @store = Store.find(params[:id])
     # @event = Event.find(params[:id])
 
