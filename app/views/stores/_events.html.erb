@@ -1,7 +1,7 @@
 <% @store.events.each do |event| %>
   <div class="event-container">
     <h6 class="event-header"><%= event.name %></h6>
-    <p><%= event.time %></p>
+    <p><small><%= event.time %></small></p>
     <p><%= event.description %></p>
     <%= link_to 'Delete', [@store, event], method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>

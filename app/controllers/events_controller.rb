@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     @event.user = current_user
 
     if @event.save
-      redirect_to root_path, notice: 'Your event has been created! Check out the store page to see your event'
+      redirect_to @store, notice: 'Your event has been created!'
     else
       render root_path, notice: 'There was an error creating your event, please try again!'
     end
@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     @store = Store.find(params[:store_id])
     @event = @store.events.find(params[:id])
     @event.destroy
-    redirect_to root_path, notice: 'Event successfully deleted!'
+    redirect_to @store, notice: 'Event successfully deleted!'
   end
 
   def show
