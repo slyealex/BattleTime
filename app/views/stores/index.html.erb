@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container store-info">
   <h1>Find a store</h1>
+</div>
 
-  <div class="container">
-    <% @stores.each do |store| %>
-      <p>Name: <%= store.name %></p>
-      <p>Address: <%= store.address %></p>
-      <p>Store Email: <%= store.email %></p>
-      <p><%= link_to 'View Store Page', "/stores/#{store.id}" %></p>
-    <% end %>
-  </div>
+<div class="container">
+  <% @stores.each do |store| %>
+    <p>Name: <%= store.name %></p>
+    <p>Address: <%= store.address %></p>
+    <p>Store Email: <%= store.email %></p>
+    <p><%= link_to 'View Store Page', "/stores/#{store.id}" %></p>
+  <% end %>
 </div>
