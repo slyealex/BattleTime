@@ -29,6 +29,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def attend
+    @event = @store.events.find(params[:id])
+    @event.attendees << current_user
+    @event.save
+  end
+
   private
 
   def event_params

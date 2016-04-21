@@ -21,6 +21,7 @@ class StoresController < ApplicationController
     # @user = User.find(params[:id])
     @store = Store.find(params[:id])
     # @event = Event.find(params[:id])
+    # @events = @store.events.find(params[:id])
 
     if current_user
       @event = @store.events.build
