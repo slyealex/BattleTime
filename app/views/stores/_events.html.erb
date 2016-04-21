@@ -2,6 +2,7 @@
   <div class="event-container">
     <h6 class="event-header"><%= event.name %></h6>
     <p><small><%= event.time %></small></p>
+    <p><small><%= event.category %></small></p>
     <p><%= event.description %></p>
     <%= link_to 'Delete', [@store, event], method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>

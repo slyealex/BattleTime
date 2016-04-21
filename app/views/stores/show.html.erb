@@ -21,6 +21,7 @@
       <%= bootstrap_form_for([@store, @event]) do |f| %>
         <%= f.text_field :name %>
         <%= f.datetime_select :time %>
+        <%= f.text_field :category %>
         <%= f.text_area :description %>
         <%= f.submit 'Add Event', class: 'btn btn-success' %>
       <% end %>

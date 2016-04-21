@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418185718) do
+ActiveRecord::Schema.define(version: 20160421204017) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160418185718) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "description"
+    t.string   "category"
   end
 
   add_index "events", ["store_id"], name: "index_events_on_store_id"

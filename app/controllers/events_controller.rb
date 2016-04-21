@@ -32,7 +32,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :time, :description)
+    params.require(:event).permit(:name, :time, :description, :category)
   end
 
   def load_store
