@@ -17,11 +17,15 @@
   <h1>Add Event</h1>
 
   <div class="col-md-4">
-    <%= bootstrap_form_for([@store, @event]) do |f| %>
-      <%= f.text_field :name %>
-      <%= f.datetime_select :time %>
-      <%= f.text_area :description %>
-      <%= f.submit 'Add Event', class: 'btn btn-success' %>
+    <% if current_user %>
+      <%= bootstrap_form_for([@store, @event]) do |f| %>
+        <%= f.text_field :name %>
+        <%= f.datetime_select :time %>
+        <%= f.text_area :description %>
+        <%= f.submit 'Add Event', class: 'btn btn-success' %>
+      <% end %>
+    <% else %>
+      <p>Please log in to create an event!</p>
     <% end %>
   </div>
 </div>
