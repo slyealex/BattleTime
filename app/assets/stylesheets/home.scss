@@ -28,6 +28,19 @@ $success: #5cb85c;
   // background-color: rgb(231, 86, 66);
 }
 
-nav {
-  // background-color: rgb(231, 86, 66);
+// JUMBOTRON STYLES --------------------------------
+
+
+.custom-jumbo {
+  background-image: url(archaonpic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  height: 650px;
+  font-family: 'Bangers';
+  border-bottom: 50px solid black;
+}
+
+.jumbo-header {
+  font-family: 'Bangers';
 }
