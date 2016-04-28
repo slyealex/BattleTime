@@ -5,6 +5,7 @@
     <p><small><%= event.category %></small></p>
     <p><%= event.description %></p>
     <%= button_to 'Delete', [@store, event], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %>
-    <%= button_to 'Attend', attend_store_event_path(@store, @event.id), method: :post, class: "btn btn-success" %>
+    <!-- attend method not working, need event ID, WIP -->
+    <%= button_to 'Attend', attend_store_event_path(@store, @event), method: :post, class: "btn btn-success" %>
   </div>
 <% end %>

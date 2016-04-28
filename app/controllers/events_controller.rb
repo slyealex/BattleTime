@@ -30,6 +30,8 @@ class EventsController < ApplicationController
   end
 
   def attend
+    @store = Store.find(params[:store_id])
+    @event = Event.find(params[:id])
     @event = @store.events.find(params[:id])
     current_user.events << @event
     @event.save
