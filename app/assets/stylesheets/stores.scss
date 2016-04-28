@@ -3,6 +3,10 @@ $primary-color: rgb(163, 161, 161);
 $success: #5cb85c;
 $secondary-color: #eeeeee;
 
+$font-one: 'Bangers', sans-serif;
+$font-two: 'Fugaz One', sans-serif;
+$font-three: 'Days One', sans-serif;
+
 // SITE WIDE STYLES --------------------------------
 
 body {
@@ -44,4 +48,5 @@ body {
   border-left: 4px solid $success;
   background-color: #eeeeee;
   margin-bottom: 20px;
+  font-family: $font-two;
 }

@@ -2,16 +2,26 @@
 $primary-color: rgb(176, 241, 102);
 $success: #5cb85c;
 
-.build {
+$font-one: 'Bangers', sans-serif;
+$font-two: 'Fugaz One', sans-serif;
+$font-three: 'Days One', sans-serif;
+
+// HOMEPAGE INFO STYLES --------------------------------
+
+
+.hobby {
   border: 1px solid black;
+  margin-bottom: 50px;
 }
 
-.paint {
+.casual {
   border: 1px solid black;
+  margin-bottom: 50px;
 }
 
-.play {
+.tournament {
   border: 1px solid black;
+  margin-bottom: 50px;
 }
 
 .home-header {
@@ -20,6 +30,11 @@ $success: #5cb85c;
 
 .box-custom {
   // background-color: rgba(0, 181, 23, 0.33);
+}
+
+.info-header {
+  text-align: center;
+  font-family: $font-two;
 }
 
 // NAVBAR STYLES --------------------------------
@@ -35,7 +50,8 @@ $success: #5cb85c;
   background-image: url(archaonpic.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: black;
+  color: #eeeeee;
+  text-shadow: 5px 2px 5px black;
   height: 650px;
   font-family: 'Bangers';
   border-bottom: 50px solid black;
