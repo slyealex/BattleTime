@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   resources :stores do
     resources :events, only: [:show, :create, :destroy] do
-        post :attend, on: :member
+      member do
+        post :attend
+      end
     end
   end
 

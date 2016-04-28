@@ -31,8 +31,9 @@ class EventsController < ApplicationController
 
   def attend
     @event = @store.events.find(params[:id])
-    @event.attendees << current_user
+    current_user.events << @event
     @event.save
+    redirect_to root_path, notice: 'You are now attending the chosen event!'
   end
 
   private
